@@ -1,0 +1,174 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-muted: var(--sidebar-muted);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-status-saved: var(--status-saved);
+  --color-status-applied: var(--status-applied);
+  --color-status-assessment: var(--status-assessment);
+  --color-status-interview: var(--status-interview);
+  --color-status-offer: var(--status-offer);
+  --color-status-rejected: var(--status-rejected);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.975 0.006 85);
+  --foreground: oklch(0.2 0.03 250);
+  --card: oklch(0.995 0.003 85);
+  --card-foreground: oklch(0.2 0.03 250);
+  --popover: oklch(0.995 0.003 85);
+  --popover-foreground: oklch(0.2 0.03 250);
+  --primary: oklch(0.52 0.12 170);
+  --primary-foreground: oklch(0.99 0.01 170);
+  --secondary: oklch(0.94 0.012 85);
+  --secondary-foreground: oklch(0.25 0.03 250);
+  --muted: oklch(0.945 0.01 85);
+  --muted-foreground: oklch(0.5 0.025 250);
+  --accent: oklch(0.93 0.04 170);
+  --accent-foreground: oklch(0.3 0.08 170);
+  --destructive: oklch(0.58 0.2 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --warning: oklch(0.7 0.15 65);
+  --border: oklch(0.9 0.012 85);
+  --input: oklch(0.88 0.014 85);
+  --ring: oklch(0.52 0.12 170);
+  --sidebar: oklch(0.21 0.03 250);
+  --sidebar-foreground: oklch(0.95 0.01 85);
+  --sidebar-muted: oklch(0.7 0.02 250);
+  --sidebar-accent: oklch(0.29 0.04 250);
+  --sidebar-border: oklch(0.3 0.03 250);
+  --status-saved: oklch(0.55 0.02 250);
+  --status-applied: oklch(0.55 0.15 245);
+  --status-assessment: oklch(0.65 0.15 65);
+  --status-interview: oklch(0.55 0.17 300);
+  --status-offer: oklch(0.55 0.14 155);
+  --status-rejected: oklch(0.58 0.19 25);
+  --chart-1: var(--status-applied);
+  --chart-2: var(--primary);
+  --chart-3: var(--status-assessment);
+  --chart-4: var(--status-interview);
+  --chart-5: var(--status-rejected);
+  --shadow-card: 0 1px 2px oklch(0.2 0.03 250 / 0.05), 0 8px 24px -12px oklch(0.2 0.03 250 / 0.12);
+  --gradient-hero: radial-gradient(ellipse at top left, oklch(0.93 0.05 170), transparent 60%),
+    radial-gradient(ellipse at bottom right, oklch(0.94 0.04 65), transparent 55%);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 250);
+  --foreground: oklch(0.93 0.01 85);
+  --card: oklch(0.2 0.025 250);
+  --card-foreground: oklch(0.93 0.01 85);
+  --popover: oklch(0.21 0.025 250);
+  --popover-foreground: oklch(0.93 0.01 85);
+  --primary: oklch(0.72 0.13 170);
+  --primary-foreground: oklch(0.16 0.03 170);
+  --secondary: oklch(0.26 0.025 250);
+  --secondary-foreground: oklch(0.9 0.01 85);
+  --muted: oklch(0.25 0.02 250);
+  --muted-foreground: oklch(0.65 0.02 250);
+  --accent: oklch(0.3 0.05 170);
+  --accent-foreground: oklch(0.85 0.06 170);
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --warning: oklch(0.78 0.14 65);
+  --border: oklch(0.29 0.02 250);
+  --input: oklch(0.32 0.02 250);
+  --ring: oklch(0.72 0.13 170);
+  --sidebar: oklch(0.13 0.02 250);
+  --sidebar-foreground: oklch(0.93 0.01 85);
+  --sidebar-muted: oklch(0.62 0.02 250);
+  --sidebar-accent: oklch(0.24 0.03 250);
+  --sidebar-border: oklch(0.27 0.02 250);
+  --status-saved: oklch(0.7 0.02 250);
+  --status-applied: oklch(0.72 0.14 245);
+  --status-assessment: oklch(0.78 0.14 65);
+  --status-interview: oklch(0.72 0.15 300);
+  --status-offer: oklch(0.72 0.14 155);
+  --status-rejected: oklch(0.68 0.18 25);
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.3), 0 8px 24px -12px oklch(0 0 0 / 0.5);
+  --gradient-hero: radial-gradient(ellipse at top left, oklch(0.28 0.06 170), transparent 60%),
+    radial-gradient(ellipse at bottom right, oklch(0.26 0.05 65), transparent 55%);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+@utility bg-hero {
+  background-image: var(--gradient-hero);
+}
+@utility font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@utility animate-rise {
+  animation: rise 0.35s ease-out both;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
